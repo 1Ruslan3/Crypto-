@@ -1,0 +1,14 @@
+C:\Users\user\source\repos\Crypto\Crypto\bin\Debug\net8.0\Crypto.exe
+C:\Users\user\source\repos\Crypto\Crypto\bin\Debug\net8.0\Crypto.deps.json
+C:\Users\user\source\repos\Crypto\Crypto\bin\Debug\net8.0\Crypto.runtimeconfig.json
+C:\Users\user\source\repos\Crypto\Crypto\bin\Debug\net8.0\Crypto.dll
+C:\Users\user\source\repos\Crypto\Crypto\bin\Debug\net8.0\Crypto.pdb
+C:\Users\user\source\repos\Crypto\Crypto\obj\Debug\net8.0\Crypto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\Crypto\Crypto\obj\Debug\net8.0\Crypto.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\Crypto\Crypto\obj\Debug\net8.0\Crypto.AssemblyInfo.cs
+C:\Users\user\source\repos\Crypto\Crypto\obj\Debug\net8.0\Crypto.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Crypto\Crypto\obj\Debug\net8.0\Crypto.dll
+C:\Users\user\source\repos\Crypto\Crypto\obj\Debug\net8.0\refint\Crypto.dll
+C:\Users\user\source\repos\Crypto\Crypto\obj\Debug\net8.0\Crypto.pdb
+C:\Users\user\source\repos\Crypto\Crypto\obj\Debug\net8.0\Crypto.genruntimeconfig.cache
+C:\Users\user\source\repos\Crypto\Crypto\obj\Debug\net8.0\ref\Crypto.dll
