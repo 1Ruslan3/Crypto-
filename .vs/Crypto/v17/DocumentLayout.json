@@ -9,6 +9,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{F85C03ED-00C1-400B-B229-1BDB6F2C9FBF}|Crypto\\Crypto.csproj|c:\\users\\user\\source\\repos\\crypto\\crypto\\bitpermutation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F85C03ED-00C1-400B-B229-1BDB6F2C9FBF}|Crypto\\Crypto.csproj|solutionrelative:crypto\\bitpermutation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F85C03ED-00C1-400B-B229-1BDB6F2C9FBF}|Crypto\\Crypto.csproj|c:\\users\\user\\source\\repos\\crypto\\crypto\\encrypt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F85C03ED-00C1-400B-B229-1BDB6F2C9FBF}|Crypto\\Crypto.csproj|solutionrelative:crypto\\encrypt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -35,6 +39,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Encrypt.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Crypto\\Crypto\\Encrypt.cs",
+              "RelativeDocumentMoniker": "Crypto\\Encrypt.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Crypto\\Crypto\\Encrypt.cs",
+              "RelativeToolTip": "Crypto\\Encrypt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T03:06:19.832Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -57,7 +74,7 @@
               "RelativeDocumentMoniker": "Crypto\\BitPermutation.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\Crypto\\Crypto\\BitPermutation.cs",
               "RelativeToolTip": "Crypto\\BitPermutation.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-13T11:28:14.81Z",
               "EditorCaption": ""
