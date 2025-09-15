@@ -1,10 +1,7 @@
 ﻿namespace Crypto
-{
-    internal class Encrypt
+{ 
+    public interface IFullEncryption
     {
-        public interface IFullEncryption
-        {
-            byte[] Encrypt(byte[] inputBlock, byte[] key);
-        }
+        byte[] Encrypt(byte[] inputBlock, byte[] key);
     }
 }
