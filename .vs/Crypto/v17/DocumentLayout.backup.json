@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\Crypto\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F85C03ED-00C1-400B-B229-1BDB6F2C9FBF}|Crypto\\Crypto.csproj|c:\\users\\user\\source\\repos\\crypto\\crypto\\encrypt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F85C03ED-00C1-400B-B229-1BDB6F2C9FBF}|Crypto\\Crypto.csproj|solutionrelative:crypto\\encrypt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F85C03ED-00C1-400B-B229-1BDB6F2C9FBF}|Crypto\\Crypto.csproj|c:\\users\\user\\source\\repos\\crypto\\crypto\\expandkey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F85C03ED-00C1-400B-B229-1BDB6F2C9FBF}|Crypto\\Crypto.csproj|solutionrelative:crypto\\expandkey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F85C03ED-00C1-400B-B229-1BDB6F2C9FBF}|Crypto\\Crypto.csproj|c:\\users\\user\\source\\repos\\crypto\\crypto\\bitpermutation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F85C03ED-00C1-400B-B229-1BDB6F2C9FBF}|Crypto\\Crypto.csproj|solutionrelative:crypto\\bitpermutation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F85C03ED-00C1-400B-B229-1BDB6F2C9FBF}|Crypto\\Crypto.csproj|c:\\users\\user\\source\\repos\\crypto\\crypto\\encrypt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F85C03ED-00C1-400B-B229-1BDB6F2C9FBF}|Crypto\\Crypto.csproj|solutionrelative:crypto\\encrypt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,20 +42,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Encrypt.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Crypto\\Crypto\\Encrypt.cs",
               "RelativeDocumentMoniker": "Crypto\\Encrypt.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\Crypto\\Crypto\\Encrypt.cs",
               "RelativeToolTip": "Crypto\\Encrypt.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-15T03:06:19.832Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ExpandKey.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Crypto\\Crypto\\ExpandKey.cs",
               "RelativeDocumentMoniker": "Crypto\\ExpandKey.cs",
@@ -68,7 +68,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "BitPermutation.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Crypto\\Crypto\\BitPermutation.cs",
               "RelativeDocumentMoniker": "Crypto\\BitPermutation.cs",
@@ -76,8 +76,7 @@
               "RelativeToolTip": "Crypto\\BitPermutation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T11:28:14.81Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-13T11:28:14.81Z"
             }
           ]
         }

@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\Crypto\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F85C03ED-00C1-400B-B229-1BDB6F2C9FBF}|Crypto\\Crypto.csproj|c:\\users\\user\\source\\repos\\crypto\\crypto\\cryptoalgoritm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F85C03ED-00C1-400B-B229-1BDB6F2C9FBF}|Crypto\\Crypto.csproj|solutionrelative:crypto\\cryptoalgoritm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F85C03ED-00C1-400B-B229-1BDB6F2C9FBF}|Crypto\\Crypto.csproj|c:\\users\\user\\source\\repos\\crypto\\crypto\\encryptanddecrypt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F85C03ED-00C1-400B-B229-1BDB6F2C9FBF}|Crypto\\Crypto.csproj|solutionrelative:crypto\\encryptanddecrypt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F85C03ED-00C1-400B-B229-1BDB6F2C9FBF}|Crypto\\Crypto.csproj|c:\\users\\user\\source\\repos\\crypto\\crypto\\encrypt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F85C03ED-00C1-400B-B229-1BDB6F2C9FBF}|Crypto\\Crypto.csproj|solutionrelative:crypto\\encrypt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -22,8 +30,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CryptoAlgoritm.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Crypto\\Crypto\\CryptoAlgoritm.cs",
+              "RelativeDocumentMoniker": "Crypto\\CryptoAlgoritm.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Crypto\\Crypto\\CryptoAlgoritm.cs",
+              "RelativeToolTip": "Crypto\\CryptoAlgoritm.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAFkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T04:24:59.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EncryptAndDecrypt.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Crypto\\Crypto\\EncryptAndDecrypt.cs",
+              "RelativeDocumentMoniker": "Crypto\\EncryptAndDecrypt.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Crypto\\Crypto\\EncryptAndDecrypt.cs",
+              "RelativeToolTip": "Crypto\\EncryptAndDecrypt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T03:31:11.914Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -42,7 +76,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Encrypt.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Crypto\\Crypto\\Encrypt.cs",
               "RelativeDocumentMoniker": "Crypto\\Encrypt.cs",
@@ -55,7 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ExpandKey.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Crypto\\Crypto\\ExpandKey.cs",
               "RelativeDocumentMoniker": "Crypto\\ExpandKey.cs",
@@ -63,12 +97,11 @@
               "RelativeToolTip": "Crypto\\ExpandKey.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T18:53:43.405Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-14T18:53:43.405Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "BitPermutation.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Crypto\\Crypto\\BitPermutation.cs",
               "RelativeDocumentMoniker": "Crypto\\BitPermutation.cs",
