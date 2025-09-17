@@ -1,7 +1,7 @@
 ﻿namespace Crypto
 { 
-    public interface IFullEncryption
+    public interface IEncryptionRound
     {
-        byte[] Encrypt(byte[] inputBlock, byte[] key);
+        byte[] EncryptRound(byte[] inputBlock, byte[] key);
     }
 }
