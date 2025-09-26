@@ -8,5 +8,6 @@ namespace Crypto
 
         byte[] Decrypt(byte[] inputBlock);
 
+        void Reset();
     }
 }

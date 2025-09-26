@@ -1,83 +1,72 @@
 ﻿using System.Collections;
 
-public static class BitPermutation
+namespace Crypto
 {
-    public static void PermuteBits(byte[] input, int[] pBox, bool lsbFirst, bool zeroBased)
+    public static class BitPermutation
     {
-        if (input == null) 
-            throw new ArgumentNullException(nameof(input));
-        if (pBox == null) 
-            throw new ArgumentNullException(nameof(pBox));
-        if (pBox.Length != 8) 
-            throw new ArgumentException("P-box length must be exactly 8 (for one byte).", nameof(pBox));
-
-        const int bitsPerByte = 8;
-
-        for (int targetIdx = 0; targetIdx < bitsPerByte; targetIdx++)
+        // pBox: 1-based positions (logical)
+        public static byte[] PermuteBits(byte[] input, int[] pBox)
         {
-            int sourceLogical = pBox[targetIdx];
-            int minLogical = zeroBased ? 0 : 1;
-            int maxLogical = zeroBased ? bitsPerByte - 1 : bitsPerByte;
-            if (sourceLogical < minLogical || sourceLogical > maxLogical)
-                throw new ArgumentException($"Invalid source logical position {sourceLogical} in pBox[{targetIdx}].", nameof(pBox));
-        }
+            if (input == null) throw new ArgumentNullException(nameof(input));
+            if (pBox == null) throw new ArgumentNullException(nameof(pBox));
+            int totalInputBits = input.Length * 8;
+            int outputLen = pBox.Length;
 
-        for (int byteIndex = 0; byteIndex < input.Length; byteIndex++)
-        {
-            byte currentByte = input[byteIndex];
-
-            BitArray oldBits = new BitArray(bitsPerByte);
-            for (int j = 0; j < bitsPerByte; j++) 
+            // Validate pBox
+            for (int i = 0; i < outputLen; i++)
             {
-                oldBits[j] = (currentByte & (1 << j)) != 0;
+                int logical = pBox[i];
+                if (logical < 1 || logical > totalInputBits)
+                    throw new ArgumentException($"Invalid pBox[{i}] = {logical} (must be 1-{totalInputBits}).");
             }
 
-            BitArray newBits = new BitArray(bitsPerByte);
-            for (int targetIdx = 0; targetIdx < bitsPerByte; targetIdx++)
+            // extract input bits logical 1..N (MSB-first per byte)
+            BitArray inputBits = new BitArray(totalInputBits);
+            for (int logical = 1; logical <= totalInputBits; logical++)
             {
-                int targetLogical = zeroBased ? targetIdx : targetIdx + 1;
-                int sourceLogical = pBox[targetIdx];
-
-                int targetPhysical = LogicalToPhysical(targetLogical, bitsPerByte, lsbFirst, zeroBased);
-                int sourcePhysical = LogicalToPhysical(sourceLogical, bitsPerByte, lsbFirst, zeroBased);
-
-                newBits[targetPhysical] = oldBits[sourcePhysical];
+                int byteIdx = (logical - 1) / 8;
+                int bitInByte = 7 - ((logical - 1) % 8);
+                inputBits[logical - 1] = (input[byteIdx] & (1 << bitInByte)) != 0;
             }
 
-            byte newByte = 0;
-            for (int j = 0; j < bitsPerByte; j++)
+            // apply pBox -> outputBits (index 0 corresponds to logical 1)
+            BitArray outputBits = new BitArray(outputLen);
+            for (int outIdx = 0; outIdx < outputLen; outIdx++)
             {
-                if (newBits[j])
-                    newByte |= (byte)(1 << j);
+                int sourceLogical = pBox[outIdx];
+                outputBits[outIdx] = inputBits[sourceLogical - 1];
             }
-            input[byteIndex] = newByte;
+
+            // pack output bits into bytes (MSB-first per byte)
+            int outBytes = (outputLen + 7) / 8;
+            byte[] output = new byte[outBytes];
+            for (int logical = 1; logical <= outputLen; logical++)
+            {
+                int byteIdx = (logical - 1) / 8;
+                int bitInByte = 7 - ((logical - 1) % 8);
+                if (outputBits[logical - 1])
+                    output[byteIdx] |= (byte)(1 << bitInByte);
+            }
+
+            return output;
         }
     }
 
-    private static int LogicalToPhysical(int logical, int totalBits, bool lsbFirst, bool zeroBased)
-    {
-        int zeroBasedLogical = zeroBased ? logical : logical - 1;
-        if (zeroBasedLogical < 0 || zeroBasedLogical >= totalBits)
-            throw new ArgumentException($"Invalid logical position {logical} (out of range 0 to {totalBits - 1}).");
+    //static void Main()
+    //{
+    //    byte[] input = { 0b10000000, 0b00000001 };
+    //    int[] pBox = { 7, 6, 5, 4, 3, 2, 1, 0 }; 
+    //    bool lsbFirst = true;
+    //    bool zeroBased = true;
 
-        return lsbFirst ? zeroBasedLogical : totalBits - 1 - zeroBasedLogical;
-    }
+    //    Console.WriteLine("Исходный input:");
+    //    Console.WriteLine($"  input[0]: {input[0]} (0b{Convert.ToString(input[0], 2).PadLeft(8, '0')})");
+    //    Console.WriteLine($"  input[1]: {input[1]} (0b{Convert.ToString(input[1], 2).PadLeft(8, '0')})");
 
-    static void Main()
-    {
-        byte[] input = { 0b10000000, 0b00000001 };
-        int[] pBox = { 7, 6, 5, 4, 3, 2, 1, 0 }; 
-        bool lsbFirst = true;
-        bool zeroBased = true;
+    //    BitPermutation.PermuteBits(input, pBox, lsbFirst, zeroBased);
 
-        Console.WriteLine("Исходный input:");
-        Console.WriteLine($"  input[0]: {input[0]} (0b{Convert.ToString(input[0], 2).PadLeft(8, '0')})");
-        Console.WriteLine($"  input[1]: {input[1]} (0b{Convert.ToString(input[1], 2).PadLeft(8, '0')})");
-
-        BitPermutation.PermuteBits(input, pBox, lsbFirst, zeroBased);
-
-        Console.WriteLine("\nПосле перестановки (каждый байт независимо):");
-        Console.WriteLine($"  input[0]: {input[0]} (0b{Convert.ToString(input[0], 2).PadLeft(8, '0')})"); 
-        Console.WriteLine($"  input[1]: {input[1]} (0b{Convert.ToString(input[1], 2).PadLeft(8, '0')})"); 
-    }
+    //    Console.WriteLine("\nПосле перестановки (каждый байт независимо):");
+    //    Console.WriteLine($"  input[0]: {input[0]} (0b{Convert.ToString(input[0], 2).PadLeft(8, '0')})"); 
+    //    Console.WriteLine($"  input[1]: {input[1]} (0b{Convert.ToString(input[1], 2).PadLeft(8, '0')})"); 
+    //}
 }

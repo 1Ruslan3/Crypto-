@@ -42,7 +42,13 @@ namespace Crypto
             byte[] iv = null,
             params object[] additionalParams)
         {
-            throw new NotImplementedException();
+            if (key == null || key.Length == 0) throw new ArgumentException("Key cannot be null or empty.", nameof(key));
+            _mode = mode;
+            _padding = padding;
+            _iv = iv != null ? (byte[])iv.Clone() : GenerateDefaultIv(key.Length); 
+            _additionalParams = ParseAdditionalParams(additionalParams);
+            _blockSize = GetBlockSizeFromParamsOrDefault();
+            _baseCipher.Initialize(key);
         }
 
         private Dictionary<string, object> ParseAdditionalParams(object[] paramsArray)
@@ -88,6 +94,11 @@ namespace Crypto
         public void Dispose()
         {
             
+        }
+
+        public void Reset()
+        {
+            throw new NotImplementedException();
         }
     }
 }
