@@ -4,7 +4,6 @@ namespace Crypto
 {
     public static class BitPermutation
     {
-        // pBox: 1-based positions (logical)
         public static byte[] PermuteBits(byte[] input, int[] pBox)
         {
             if (input == null) throw new ArgumentNullException(nameof(input));
@@ -12,7 +11,6 @@ namespace Crypto
             int totalInputBits = input.Length * 8;
             int outputLen = pBox.Length;
 
-            // Validate pBox
             for (int i = 0; i < outputLen; i++)
             {
                 int logical = pBox[i];
@@ -20,7 +18,6 @@ namespace Crypto
                     throw new ArgumentException($"Invalid pBox[{i}] = {logical} (must be 1-{totalInputBits}).");
             }
 
-            // extract input bits logical 1..N (MSB-first per byte)
             BitArray inputBits = new BitArray(totalInputBits);
             for (int logical = 1; logical <= totalInputBits; logical++)
             {
@@ -29,7 +26,6 @@ namespace Crypto
                 inputBits[logical - 1] = (input[byteIdx] & (1 << bitInByte)) != 0;
             }
 
-            // apply pBox -> outputBits (index 0 corresponds to logical 1)
             BitArray outputBits = new BitArray(outputLen);
             for (int outIdx = 0; outIdx < outputLen; outIdx++)
             {
@@ -37,7 +33,6 @@ namespace Crypto
                 outputBits[outIdx] = inputBits[sourceLogical - 1];
             }
 
-            // pack output bits into bytes (MSB-first per byte)
             int outBytes = (outputLen + 7) / 8;
             byte[] output = new byte[outBytes];
             for (int logical = 1; logical <= outputLen; logical++)

@@ -1,0 +1,47 @@
+###############################################################################
+# .gitattributes for C# / .NET projects (cross-platform safe)
+###############################################################################
+
+# Устанавливаем автоматическую нормализацию перевода строк:
+# На Windows будут CRLF (\r\n), на Linux/macOS — LF (\n)
+* text=auto
+
+# Явно задаём CRLF для исходников под Windows
+*.cs text eol=crlf
+*.csproj text eol=crlf
+*.sln text eol=crlf
+*.config text eol=crlf
+*.xml text eol=crlf
+*.json text eol=crlf
+*.xaml text eol=crlf
+*.txt text eol=crlf
+
+# Сценарии и скрипты (Bash, Python и т.п.) — всегда LF (для Linux)
+*.sh text eol=lf
+*.py text eol=lf
+
+# Двоичные файлы — без изменений
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.exe binary
+*.dll binary
+*.pdb binary
+
+# Office и архивы
+*.zip binary
+*.7z binary
+*.docx binary
+*.xlsx binary
+*.pptx binary
+
+###############################################################################
+# Настройки для GitHub linguist (по желанию)
+###############################################################################
+
+# Исключить сборочные артефакты и выходные папки
+bin/ linguist-vendored
+obj/ linguist-vendored

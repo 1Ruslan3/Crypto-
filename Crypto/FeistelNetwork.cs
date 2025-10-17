@@ -43,7 +43,6 @@
                 R = newR;
             }
 
-            // return R || L (final swap)
             return Combine(R, L);
         }
 

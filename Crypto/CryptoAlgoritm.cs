@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Crypto
+﻿namespace Crypto
 {
-    public enum EncryptionMode 
+    public enum EncryptionMode
     {
         ECB,    // Electronic Codebook 
         CBC,    // Cipher Block Chaining
@@ -18,7 +11,7 @@ namespace Crypto
         RandomDelta  // Random Delta 
     }
 
-    public enum PaddingMode
+    public enum PaddingMODE
     {
         Zeros,      // Добавление нулей (не удаляется автоматически)
         AnsiX923,   // ANSI X.9.23: нули + байт с длиной набивки
@@ -30,7 +23,7 @@ namespace Crypto
     {
         private readonly ISymmetricBlockCipher _baseCipher;
         private readonly EncryptionMode _mode;
-        private readonly PaddingMode _padding;
+        private readonly PaddingMODE _padding;
         private readonly byte[] _iv;
         private readonly int _blockSize;
         private readonly Dictionary<string, object> _additionalParams;
@@ -38,7 +31,7 @@ namespace Crypto
         public CryptoAlgoritm(
             byte[] key,
             EncryptionMode mode,
-            PaddingMode padding,
+            PaddingMODE padding,
             byte[] iv = null,
             params object[] additionalParams)
         {
