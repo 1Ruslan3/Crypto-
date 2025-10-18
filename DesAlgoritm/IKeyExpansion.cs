@@ -1,4 +1,4 @@
-namespace Crypto
+namespace DesAlgoritm
 {
     public interface IKeyExpansion
     {

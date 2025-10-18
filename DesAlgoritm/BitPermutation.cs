@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace Crypto
+namespace DesAlgoritm
 {
     public static class BitPermutation
     {

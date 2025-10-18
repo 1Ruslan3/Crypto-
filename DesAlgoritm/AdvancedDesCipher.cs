@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace Crypto
+namespace DesAlgoritm
 {
     #region ciphermode
     public enum CipherMode
@@ -682,15 +682,15 @@ namespace Crypto
 
     #endregion
 
-    //class Program
-    //{
-    //    static void Main(string[] args)
-    //    {
-    //        DesDemo.RunFullDemo();
+    class Program
+    {
+       static void Main(string[] args)
+       {  
+           DesDemo.RunFullDemo();
 
-    //        Console.WriteLine("\nНажмите любую клавишу для выхода...");
-    //        Console.ReadKey();
-    //    }
-    //}
+           Console.WriteLine("\nНажмите любую клавишу для выхода...");
+           Console.ReadKey();
+       }
+    }
 
 }

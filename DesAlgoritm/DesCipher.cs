@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace Crypto
+namespace DesAlgoritm
 {
     public class DesCipher : ISymmetricBlockCipher, IDisposable
     {
