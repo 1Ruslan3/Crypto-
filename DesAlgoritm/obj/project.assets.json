@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\source\\repos\\Crypto\\DesAlgoritm\\DesAlgoritm.csproj",
-      "projectName": "DesAlgoritm",
-      "projectPath": "C:\\Users\\user\\source\\repos\\Crypto\\DesAlgoritm\\DesAlgoritm.csproj",
+      "projectUniqueName": "C:\\Users\\user\\source\\repos\\Crypto\\Crypto\\Crypto.csproj",
+      "projectName": "Crypto",
+      "projectPath": "C:\\Users\\user\\source\\repos\\Crypto\\Crypto\\Crypto.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\source\\repos\\Crypto\\DesAlgoritm\\obj\\",
+      "outputPath": "C:\\Users\\user\\source\\repos\\Crypto\\Crypto\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
